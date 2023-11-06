@@ -16,25 +16,26 @@ from PIL import Image
 
 caminho_Atual = Path(__file__).parent if "__file__" in locals () else Path.cwd()
 
-Arq_css = caminho_Atual / "estilos" / "estilo.css"
-curriculo = caminho_Atual / "arquivos"/ "Erik Marta Garcia.pdf"
-foto = caminho_Atual / "arquivos"/ "ft5.png"
+#NESSE CASO EU RECOMENDO DEIXAR TODOS OS ARQUIVOS NA MESMA PASTA OU EM UMA SUBPASTA DENTRO DA PASTA RAIZ
+
+ARQUIVO CSS = NOME PASTA RAIZ / "NOME SUBPASTA" / "NOME DO ARQUIVO.css"
+CURRICULO = NOME PASTA RAIZ / "NOME SUBPASTA" / "SEU CURRÍCULO.pdf"
+FOTO = NOME PASTA RAIZ / "NOME SUBPASTA" / "SUA FOTO.png"
 
 # -----------------CONFIGURAÇÕES GERAIS---------------------- # 
-PAGE_TITLE = "Cúrriculo Digital | Erik Marta Garcia"
+PAGE_TITLE = "Cúrriculo Digital | SEU NOME"
 PAGE_ICON = ":wave"
-NAME = "Erik Garcia"
-DESCRIPTION = """ Ciêntista de Dados - Ajudando as empresas a tomar decisões com base em fundamentos estatísticos."""
-EMAIL = "erik.martaneva@gmail.com"
+NAME = "SEU NOME"
+DESCRIPTION = """ SUA FUNÇÃO - DESCRIÇÃO DA SUA FUNÇÃO."""
+EMAIL = "sEU ENDEREÇO DE E-MAIL"
 SOCIAL_MEDIA = {
-        "GitHub" : "https://github.com/erikssfd",
-        "Medium" : "https://medium.com/@erik.martaneva",
-        "LinkedIn" : "https://www.linkedin.com/in/erikmartagarcia/"
+        "GitHub" : "ENDEREÇO REPOSITÓRIO GITHUB",
+        "Medium" : "ENDEREÇO ARTIGOS MEDIUM",
+        "LinkedIn" : "ENDEREÇO LINKEDIN"
 }
 
 PROJECTS = {
-        "💻 Amazon Dashboard - Comparação de produtos amazon" : "https://github.com/erikssfd/AmzonDashboard",
-        "💻 Coursera Dashboard - Comparações de Preços e Avaliações" : "https://github.com/erikssfd/CourseraDashboard"
+        "INSIRA UM ÍCONE |NOME DO SEU PROJETO| - |DESCRIÇÃO DO SEU PROJETO|" : "LINK DO SEU PROJETO",
 }
 
 st.set_page_config(page_title = PAGE_TITLE, page_icon = PAGE_ICON)
@@ -109,7 +110,7 @@ st.write("-----")
  
  
 st.write("Coloque um ícone", "** Nome do seu Cargo | Nome da Empresa **")
-st.write("(01/2023) - (08/2023)")
+st.write("(0DATA CONTRATAÇÃO) - (DATA TÉRMINO)")
 st.write("""
          - Primeiro feito no emprego;
          - Segundo feito no emprego;
