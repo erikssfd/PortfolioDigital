@@ -4,7 +4,8 @@ Criação de portfólio digital com Python, Streamlit e CSS
 Olá, Buenas? Aqui vou detalhar passo a passo de como realizar um portfólio digital igual ao meu!
 
 BORA CODAR?
-#------------------------------------------------ Iniciando o App.py ------------------------------------------------------------#
+#---------------------------------
+# Iniciando o App.py
 
 #AQUI VAMOS COMEÇAR A IMPORTAR AS BIBLIOTECAS
 
@@ -12,7 +13,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 
-#--------- Configurações de Localização dos arquivos -------------#
+#Configurações de Localização dos arquivos#
 
 caminho_Atual = Path(__file__).parent if "__file__" in locals () else Path.cwd()
 
@@ -22,7 +23,7 @@ ARQUIVO CSS = NOME PASTA RAIZ / "NOME SUBPASTA" / "NOME DO ARQUIVO.css"
 CURRICULO = NOME PASTA RAIZ / "NOME SUBPASTA" / "SEU CURRÍCULO.pdf"
 FOTO = NOME PASTA RAIZ / "NOME SUBPASTA" / "SUA FOTO.png"
 
-# -----------------CONFIGURAÇÕES GERAIS---------------------- # 
+#CONFIGURAÇÕES GERAIS# 
 PAGE_TITLE = "Cúrriculo Digital | SEU NOME"
 PAGE_ICON = ":wave"
 NAME = "SEU NOME"
@@ -41,7 +42,7 @@ PROJECTS = {
 st.set_page_config(page_title = PAGE_TITLE, page_icon = PAGE_ICON)
 
 
-# ----------------- Carregando CSS, PDF & FOTO DE PERFIL --------------------- #
+#Carregando CSS, PDF & FOTO DE PERFIL#
 
 with open(Arq_css) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html = True)
@@ -51,7 +52,7 @@ with open(curriculo, "rb") as curriculo_pdf:
     
 foto_perfil = Image.open(foto)
 
-# -------------------------- Colunas ------------------------------------------ #
+#Colunas#
 
 coluna1, coluna2 = st.columns(2, gap = "small")
 
@@ -69,7 +70,7 @@ with coluna2:
     )
     st.write("📧", EMAIL)
 
-# ---------------------------- Links de Mídias Sociais ------------------------- #
+#Links de Mídias Sociais#
 
 st.write("#")
 cols = st.columns(len(SOCIAL_MEDIA))
@@ -78,7 +79,7 @@ cols = st.columns(len(SOCIAL_MEDIA))
 for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
     cols[index].write(f"[{platform}]({link})")
 
-# --------------------------- Experiência e Qualificações ---------------------- #
+# Experiência e Qualificações #
  
 st.write("#")
 st.subheader("Experiência & Qualificações")
@@ -90,7 +91,7 @@ st.write("""
          - ✔ Experiência 5
          """)
 
-# --------------------------- Habilidades ------------------------------------- #
+# Habilidades #
 st.write("#")
 st.subheader("Habilidades")
 st.write("""
@@ -103,21 +104,21 @@ st.write("""
          - ✔ ♟ Habilidade 7
          """)
 
-# --------------------------- Histórico de Trabalho ---------------------------- #
+# Histórico de Trabalho #
 st.write("#")
 st.subheader("Histórico de Trabalho")
 st.write("-----")
  
  
 st.write("Coloque um ícone", "** Nome do seu Cargo | Nome da Empresa **")
-st.write("(0DATA CONTRATAÇÃO) - (DATA TÉRMINO)")
+st.write("(DATA CONTRATAÇÃO) - (DATA TÉRMINO)")
 st.write("""
          - Primeiro feito no emprego;
          - Segundo feito no emprego;
          - Terceiro feito no emprego.
          """)
 
-# --------------------------- Projetos & Conquistas ---------------------------- #
+# Projetos & Conquistas #
 st.write("#")
 st.subheader("Projetos e Conquistas")
 st.write("-----")
